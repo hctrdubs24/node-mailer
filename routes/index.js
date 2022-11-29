@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
   try {
     res.send("hola");
   } catch (error) {
-    console.log(error);
+    res.status(500).json(error);
   }
 });
 
@@ -41,7 +41,7 @@ router.post("/email", async (req, res) => {
 
     res.send("hola");
   } catch (error) {
-    console.log(error);
+    res.status(500).json(error);
   }
 });
 
