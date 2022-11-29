@@ -18,7 +18,7 @@ router.post("/email", async (req, res) => {
     port: 465,
     secure: false,
     auth: {
-      user: "hectordubs24@gmail.com",
+      user: email,
       pass: "xtbicyokoxruiagb",
     },
   });
