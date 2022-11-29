@@ -2,6 +2,10 @@ const { Router } = require("express");
 const nodemailer = require("nodemailer");
 const router = Router();
 
+router.get("/", (req, res) => {
+  res.send("hola");
+});
+
 router.post("/email", async (req, res) => {
   const { email } = req.body;
   contentHTML = `
