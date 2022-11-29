@@ -23,7 +23,7 @@ router.post("/email", async (req, res) => {
       port: 465,
       secure: false,
       auth: {
-        user: email,
+        user: 'hectordubs24@gmail.com',
         pass: "xtbicyokoxruiagb",
       },
     });
@@ -32,7 +32,7 @@ router.post("/email", async (req, res) => {
 
     const info = await transporter.sendMail({
       from: "Registro de usuario <Copilot PC>",
-      to: "hectordubs24@gmail.com",
+      to: email,
       subject: "Registro de usuario",
       html: contentHTML,
     });
